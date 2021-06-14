@@ -14,6 +14,7 @@ use App\Http\Controllers\SerieController;
 |
 */
 
-Route::get('/', [SerieController::class,'index']);
+Route::get('/', [SerieController::class,'index'])->name('index');
 Route::get('/SeeMore/{id}', [SerieController::class,'show'])->name('SeeMore');
-
+Route::get('/Create', [SerieController::class,'create'])->name('Create');
+Route::post('/Create', [SerieController::class,'store'])->name('Store');

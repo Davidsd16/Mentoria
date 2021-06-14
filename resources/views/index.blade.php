@@ -11,8 +11,9 @@
     <ul>
     @foreach ($series as $serie )
         
-        <li>{{$serie->name}}</li>
-        <a href="{{route('SeeMore',$serie->id)}}">
+        <h1>{{$serie->name}}</h1>
+        <a href="{{route('SeeMore', $serie->id)}}">
+
     <button>Ver Más</button></a>
     @endforeach
     </ul>

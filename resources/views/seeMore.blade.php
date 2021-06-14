@@ -8,7 +8,12 @@
     <title>See More</title>
 </head>
 <body>
-<h1>{{$serie->title}}</h1>
+<body>
+    <p>{{$serie->name}}</p>
     <p>{{$serie->description}}</p>
+    <p>{{$serie->cast}}</p>
+    <p>{{$serie->opinion}}</p>
+    <p>{{$serie->seassons}}</p>
+
 </body>
 </html>

@@ -25,7 +25,7 @@ class SerieController extends Controller
      */
     public function create()
     {
-        //
+        return view("create");
     }
 
     /**
@@ -36,7 +36,15 @@ class SerieController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        
+        $serie = Serie::create(["name"=>$request->name,
+                                "cast"=>$request->cast,
+                                "seasson"=>$request->seasson,
+                                "description"=>$request->description,
+                                "opinion"=>$request->opinion]);
+       // $serie->save();
+        return redirect()->route('index');
+
     }
 
     /**

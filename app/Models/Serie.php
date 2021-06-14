@@ -13,7 +13,7 @@ class Serie extends Model
 
         'name',
         'cast',
-        'seassons',
+        'seasson',
         'description',
         'opinion',
     ];
