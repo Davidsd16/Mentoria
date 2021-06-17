@@ -80,9 +80,12 @@ class SerieController extends Controller
      * @param  \App\Models\Series  $series
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Serie $series)
+    public function update(Request $request, $id)
     {
-        //
+        $serie = Serie::find($id);
+        $serie->update($request->all());
+        return redirect()->route('index');
+
     }
 
     /**

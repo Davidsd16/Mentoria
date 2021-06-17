@@ -8,7 +8,9 @@
 </head>
 <body>
     
-    <form action="{{route('Update')}}" method="post">
+    
+    <form action="{{route('Update', $serie->id)}}" method="POST">
+    @method('PUT')    
     @csrf
     <label for="name">Title:</label>
     <input name="name" type="text" value="{{$serie->name}}">
