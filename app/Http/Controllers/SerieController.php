@@ -65,9 +65,12 @@ class SerieController extends Controller
      * @param  \App\Models\Series  $series
      * @return \Illuminate\Http\Response
      */
-    public function edit(Serie $serie)
-    {
-        //
+    public function edit($id)
+    {   
+        $serie = Serie::find($id);
+
+        return view ('edit',['serie'=>$serie]);
+    
     }
 
     /**

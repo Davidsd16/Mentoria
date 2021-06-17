@@ -18,3 +18,5 @@ Route::get('/', [SerieController::class,'index'])->name('index');
 Route::get('/SeeMore/{id}', [SerieController::class,'show'])->name('SeeMore');
 Route::get('/Create', [SerieController::class,'create'])->name('Create');
 Route::post('/Create', [SerieController::class,'store'])->name('Store');
+Route::get('/Edit/{id}', [SerieController::class,'edit'])->name('Edit');
+Route::post('/Update', [SerieController::class,'update'])->name('Update');
